@@ -4,7 +4,7 @@
     modulesManager.set("grid", Grid);
 
     function Grid() {
-        var sizes = ['x', 'l', 'm', 's', 't'],
+        var sizes,
             rowDetails = {
                 currentRowWidth: 0,
                 rowNumber: 1
@@ -12,8 +12,9 @@
             item = modulesManager.get('grid.item'),
             util = modulesManager.get('util');
 
-        function create(container) {
-            var items = util.getArray(container.children),
+        function create(container, sizesArr) {
+            sizes = sizesArr || ['x','l','m','s','t'];
+            var items = util.getArray(container.querySelectorAll("[data-grid]")),
                 containerLayoutSize = getLayoutSize(container.classList);
             
             clearComments(container);
@@ -89,8 +90,7 @@
         }
 
         return {
-            create: create,
-            update: undefined
+            create: create
         };
     }
 

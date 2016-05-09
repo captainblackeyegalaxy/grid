@@ -23,7 +23,7 @@
         }
 
         function setWidth(containerLayoutSize, sizes) {
-            width = _getItemSize(itemElement.classList, containerLayoutSize, sizes);
+            width = getItemSize(itemElement.dataset.grid.split(" "), containerLayoutSize, sizes);
             return this;
         }
 
@@ -32,9 +32,8 @@
             return this;
         }
         
-        function _getItemSize(itemClassList, containerLayoutSize, sizes) {
+        function getItemSize(itemClassList, containerLayoutSize, sizes) {
             var itemClassListArr = util.getArray(itemClassList);
-            itemClassListArr.pop();
             
             var indexOfContainerLayoutSize = sizes.indexOf(containerLayoutSize);
             

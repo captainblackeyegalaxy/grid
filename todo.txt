@@ -1,0 +1,3 @@
+* optimize setWidth
+* make sizes customizable with specific sizes
+* fix margins

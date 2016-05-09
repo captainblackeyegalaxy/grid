@@ -8,11 +8,11 @@
             util = modulesManager.get("util"),
             gridModule = modulesManager.get("grid");
         
-        function create() {
+        function create(sizesArr) {
             var containers = util.getArray(document.querySelectorAll(".gg"));
 
             containers.forEach(function(container) {
-                grids.push(gridModule.create(container));
+                grids.push(gridModule.create(container, sizesArr));
             });
         }
 
