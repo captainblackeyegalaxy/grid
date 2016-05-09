@@ -1,0 +1,17 @@
+.redSquareBox {
+    background-color: red;
+    height: 100px;
+    display: inline-block;
+    margin: 0;
+}
+
+.blueSquareBox {
+    background-color: blue;
+    height: 100px;
+    display: inline-block;
+    margin: 0;
+}
+
+.gg {
+    font-size: 0;
+}
